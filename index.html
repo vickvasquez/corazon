@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Te quiero chaparrita</title>
+    <link href='http://fonts.googleapis.com/css?family=Allura' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="js/prefixfree.js"></script>
+    <script src="js/jquery.arctext.js"></script>
+    <style>
+    ::selection {
+        background: rgba(255, 51, 102, .5);
+    }
+    
+    body {
+        background: url("./img/sanvalentin.jpg");
+        overflow: hidden;
+    }
+    
+    #latido {
+        animation: 7s latido infinite;
+        color: white;
+        font-family: 'Allura', cursive;
+        font-size: 40px;
+        margin: 0 auto;
+        text-align: center;
+        width: 500px;
+    }
+    
+    #latido img {
+        width: 500px;
+    }
+    
+    #latido h1 {
+        position: absolute;
+        left: 10%;
+        line-height: 80px;
+        top: 10%;
+        width: 400px;
+    }
+    
+    @keyframes latido {
+        0% {
+            transform: scale(1)
+        }
+        47% {
+            transform: scale(1)
+        }
+        48% {
+            transform: scale(.9)
+        }
+        50% {
+            transform: scale(1.1)
+        }
+        52% {
+            transform: scale(.9)
+        }
+        54% {
+            transform: scale(1)
+        }
+    }
+    
+    input {
+        background: rgba(255, 255, 255, .7);
+        border: none;
+        display: block;
+        height: 30px;
+        margin: 0 auto;
+        padding: 0 30px;
+        width: 250px;
+    }
+    
+    input:focus {
+        background: white;
+        border-spacing: 100px;
+    }
+    
+    .rotacion {
+        animation: 7s rotacion;
+        transform-origin: left;
+    }
+    
+    .neojp {
+        color: red;
+        display: none;
+        font-size: 100px;
+        margin-left: 30px;
+        text-align: center;
+    }
+    
+    @keyframes rotacion {
+        100% {
+            transform: rotate(360deg)
+        }
+    }
+    </style>
+    <script>
+    $(document).on("ready", troll)
+
+    function troll() {
+        //$('#corazon').on("submit", lol)
+
+        //function lol(x) {
+
+        /*$('#corazon').fadeOut();*/
+        //  x.preventDefault();
+        $('#nombre').fadeOut();
+        $('span').text($('#nombre').val());
+        $('.neojp').fadeIn(2000);
+        $('.neojp').css('display', 'inline-block');
+
+        var $example2 = $('.neojp');
+        $example2.arctext({
+                radius: 400,
+                dir: -1
+            })
+            //}
+    }
+    </script>
+</head>
+
+<body>
+    <div id="latido">
+        <h1 id="texto">I love <span>cosita</span></h1>
+        <img src="./img/corazon.png" alt="corazon" />
+    </div>
+    <div class="rotacion">
+        <p class="neojp">&hearts;&hearts;&hearts;&hearts;&hearts;&hearts;&hearts;&hearts;&hearts;&hearts;&hearts;&hearts;&hearts;&hearts;&hearts;&hearts;&hearts;&hearts;&hearts;&hearts;&hearts;&hearts;</p>
+    </div>
+    <!--
+    <form id="corazon">
+        <input type="text" placeholder="Escribe el nombre del ser amado" id="nombre" />
+    </form>-->
+</body>
+
+</html>
