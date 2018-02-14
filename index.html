@@ -108,8 +108,6 @@
         $('#nombre').fadeOut();
         $('span').text($('#nombre').val());
         $('.neojp').fadeIn(2000);
-        $('.neojp').css('display', 'inline-block');
-
         var $example2 = $('.neojp');
         $example2.arctext({
                 radius: 400,
@@ -119,19 +117,20 @@
     }
     </script>
 </head>
+        <img src="./img/corazon.png" alt="corazon" />
+    </div>
+        <h1 id="texto">I love</h1>
+
+        $('.neojp').css('display', 'inline-block');
 
 <body>
     <div id="latido">
-        <h1 id="texto">I love <span></span></h1>
-        <img src="./img/corazon.png" alt="corazon" />
-    </div>
     <div class="rotacion">
         <p class="neojp">&hearts;&hearts;&hearts;&hearts;&hearts;&hearts;&hearts;&hearts;&hearts;&hearts;&hearts;&hearts;&hearts;&hearts;&hearts;&hearts;&hearts;&hearts;&hearts;&hearts;&hearts;&hearts;</p>
     </div>
-    <!--
     <form id="corazon">
         <input type="text" placeholder="Escribe el nombre del ser amado" id="nombre" />
-    </form>-->
+    </form>
 </body>
 
 </html>
