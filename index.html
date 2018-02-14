@@ -18,8 +18,16 @@
             overflow: hidden;
         }
 
+        form {
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            height: 100vh;
+        }
+
         #latido {
-            animation: 7s latido infinite;
+            display:none;
+            animation: 5s latido infinite;
             color: white;
             font-family: 'Allura', cursive;
             font-size: 40px;
@@ -63,12 +71,12 @@
 
         input {
             background: rgba(255, 255, 255, .7);
-            border: none;
+            border: 1px solid #ccc;
             display: block;
-            height: 30px;
             margin: 0 auto;
             padding: 0 30px;
             width: 250px;
+            padding: 1rem;
         }
 
         input:focus {
@@ -133,7 +141,7 @@
         <p class="neojp">&hearts;&hearts;&hearts;&hearts;&hearts;&hearts;&hearts;&hearts;&hearts;&hearts;&hearts;&hearts;&hearts;&hearts;&hearts;&hearts;&hearts;&hearts;&hearts;&hearts;&hearts;&hearts;</p>
     </div>
     <form id="corazon">
-        <input type="text" placeholder="Escribe el nombre del ser amado" id="nombre" />
+        <input type="text" autofocus placeholder="Escribe el nombre del ser amado" id="nombre" />
     </form>
 </body>
 
